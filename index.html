@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#FBF4E8">
+<title>Хой Ан 88 — вьетнамская кухня у метро «Проспект Победы», Казань</title>
+<meta name="description" content="Фо бо, том ям, бань бао и баббл-чай. Уютное вьетнамское кафе на Рихарда Зорге, 66к5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== ТОКЕНЫ (ui-ux-pro-max: Restaurant — appetizing red + warm gold, Minimalism; + нефритовый для зелени) ===== */
+:root{
+  --color-bg:#FBF4E8;      --color-paper:#FFFDF8;   --color-band:#F4E7D2;
+  --color-fg:#3A1D14;      --color-muted:#77574A;   --color-border:#EADAC0;
+  --color-primary:#B91C1C; --color-primary-hover:#991B1B; --color-on-primary:#FFFFFF;
+  --color-lantern:#DC2626; --color-gold:#CA8A04;    --color-gold-text:#8A5A00;
+  --color-jade:#2F6B4F;    --color-jade-soft:#E3EFE6;
+  --color-ring:#B91C1C;
+  --font-head:Lora,Georgia,serif;
+  --font-body:"Nunito Sans",system-ui,sans-serif;
+  --font-hand:Caveat,cursive;
+  --space-2:16px;--space-3:24px;--space-4:32px;--space-5:48px;--space-6:88px;
+  --r-sm:12px;--r-md:20px;--r-lg:30px;
+  --shadow:0 20px 44px -26px rgba(58,29,20,.45);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{font:400 17px/1.65 var(--font-body);background:var(--color-bg);color:var(--color-fg);overflow-x:hidden;-webkit-user-select:none;user-select:none}
+img{display:block;max-width:100%;-webkit-user-drag:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;line-height:1.12;text-wrap:balance}
+em{font-style:italic;color:var(--color-primary)}
+:focus-visible{outline:3px solid var(--color-ring);outline-offset:3px;border-radius:8px}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hand{font-family:var(--font-hand);font-weight:700;color:var(--color-primary);font-size:26px;line-height:1.1}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-jade)}
+.sec{padding:var(--space-6) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:var(--space-3);margin-bottom:var(--space-5);flex-wrap:wrap}
+.sec-head h2{font-size:clamp(32px,4.6vw,52px);margin-top:10px}
+.sec-head p{color:var(--color-muted);max-width:420px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:800;font-size:16px;
+  transition:transform .2s var(--ease),background-color .2s,border-color .2s,color .2s;cursor:pointer}
+.btn-primary{background:var(--color-primary);color:var(--color-on-primary);box-shadow:0 14px 28px -14px rgba(185,28,28,.7)}
+.btn-primary:hover{background:var(--color-primary-hover);transform:translateY(-2px)}
+.btn-outline{border:1.5px solid var(--color-fg)}
+.btn-outline:hover{background:var(--color-fg);color:var(--color-paper)}
+.btn:active{transform:scale(.97)}
+
+/* ===== HEADER ===== */
+.header{position:sticky;top:0;z-index:50;background:rgba(251,244,232,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.header.scrolled{border-color:var(--color-border)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{width:30px;height:42px}
+.logo b{display:block;font-family:var(--font-head);font-size:24px;line-height:1}
+.logo small{display:block;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--color-muted);margin-top:4px}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 16px;border-radius:999px;font-weight:700;font-size:15px;transition:background-color .2s}
+.nav a:hover{background:var(--color-band)}
+.header-cta{min-height:46px;padding:0 20px;font-size:15px}
+@media(max-width:900px){.nav,.header-cta{display:none}.header .container{height:64px}}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:var(--space-5) 0 var(--space-6);overflow:hidden}
+.lanterns{position:absolute;top:0;left:0;right:0;height:240px;pointer-events:none;z-index:0}
+.lantern{position:absolute;top:0;transform-origin:50% 0;animation:sway 5s ease-in-out infinite}
+.lantern svg{display:block}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:var(--space-5);align-items:center;padding-top:40px}
+.rating{display:inline-flex;align-items:center;gap:12px;background:var(--color-paper);border:1px solid var(--color-border);border-radius:999px;padding:8px 18px 8px 8px;font-weight:700;font-size:14px}
+.rating b{background:var(--color-jade);color:#fff;border-radius:999px;padding:4px 12px;font-size:15px}
+.stars{display:flex;gap:2px;color:var(--color-gold)}
+.stars .icon{width:16px;height:16px;fill:currentColor;stroke:none}
+.hero h1{font-size:clamp(42px,6.6vw,84px);margin:22px 0 18px;letter-spacing:-.01em}
+.hero-lead{font-size:clamp(17px,1.6vw,19px);color:var(--color-muted);max-width:520px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:var(--space-4)}
+.hero-visual{position:relative}
+.arch{aspect-ratio:4/5;border-radius:999px 999px var(--r-lg) var(--r-lg);overflow:hidden;background:radial-gradient(circle at 50% 30%,#F3C77A,#D9672B 55%,#7A1F12);box-shadow:var(--shadow);border:8px solid var(--color-paper)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.note{position:absolute;left:-28px;bottom:48px;background:var(--color-paper);border-radius:var(--r-md);padding:16px 20px;box-shadow:var(--shadow);transform:rotate(-4deg);max-width:240px}
+.note small{display:block;font-size:13px;color:var(--color-muted);font-weight:700;margin-top:2px}
+.stamp{position:absolute;right:-14px;top:40px;width:118px;height:118px;border-radius:50%;background:var(--color-jade);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;transform:rotate(8deg);box-shadow:var(--shadow);border:3px dashed rgba(255,255,255,.5);outline:6px solid var(--color-jade)}
+.stamp b{font-family:var(--font-head);font-size:30px;line-height:1}
+.stamp span{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:900px){
+  .hero{padding-top:var(--space-3)}
+  .hero-grid{grid-template-columns:1fr;padding-top:70px}
+  .hero-visual{max-width:440px;margin:0 auto;width:100%}
+  .note{left:0}.stamp{right:0}
+}
+@media(max-width:480px){.hero .actions .btn{flex:1 1 100%}.stamp{width:96px;height:96px}.stamp b{font-size:24px}}
+
+/* ===== INFO ===== */
+.info{display:grid;grid-template-columns:repeat(4,1fr);background:var(--color-paper);border:1px solid var(--color-border);border-radius:var(--r-lg);overflow:hidden}
+.info-item{display:flex;gap:14px;padding:24px}
+.info-item+.info-item{border-left:1px solid var(--color-border)}
+.info-item .icon{color:var(--color-primary);margin-top:3px}
+.info-item small{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted)}
+.info-item b{font-size:17px;white-space:nowrap}
+@media(max-width:900px){.info{grid-template-columns:1fr 1fr}.info-item:nth-child(3){border-left:0}.info-item:nth-child(n+3){border-top:1px solid var(--color-border)}}
+@media(max-width:520px){.info-item{padding:18px 16px}.info-item .icon{display:none}.info-item b{font-size:15px}}
+
+/* ===== SIGNATURE ===== */
+.sig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sig{background:var(--color-paper);border:1px solid var(--color-border);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s}
+.sig:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.sig-top{height:150px;display:grid;place-items:center;position:relative}
+.sig-top svg{width:96px;height:96px}
+.sig:nth-child(1) .sig-top{background:#F7E0C8}.sig:nth-child(2) .sig-top{background:#F8D9D2}.sig:nth-child(3) .sig-top{background:#F3EBD6}.sig:nth-child(4) .sig-top{background:var(--color-jade-soft)}
+.sig-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.sig-body .vn{font-family:var(--font-hand);font-size:22px;color:var(--color-primary);line-height:1}
+.sig-body h3{font-size:22px}
+.sig-body p{color:var(--color-muted);font-size:15px;flex:1}
+.sig-body .row{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding-top:12px;border-top:1px dashed var(--color-border)}
+.sig-body .row span{font-size:14px;color:var(--color-muted);font-weight:700}
+.sig-body .row b{font-family:var(--font-head);font-size:24px;color:var(--color-primary)}
+@media(max-width:1000px){.sig-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){
+  .sig-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 8px;gap:14px;scrollbar-width:none}
+  .sig-grid::-webkit-scrollbar{display:none}
+  .sig{flex:0 0 80%;scroll-snap-align:start}
+}
+
+/* ===== GLOSSARY ===== */
+.gloss{background:var(--color-jade);color:#F1F7F2;border-radius:var(--r-lg);padding:var(--space-5);display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--space-5);align-items:center;position:relative;overflow:hidden}
+.gloss::after{content:"";position:absolute;right:-90px;bottom:-90px;width:300px;height:300px;border-radius:50%;border:40px solid rgba(255,255,255,.06)}
+.gloss h2{font-size:clamp(28px,3.6vw,40px);color:#fff;margin:8px 0 12px}
+.gloss .kicker{color:#BFE3CC}
+.gloss p{color:#D5EADB}
+.words{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;position:relative;z-index:1}
+.word{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px}
+.word b{display:block;font-family:var(--font-head);font-size:20px;color:#fff}
+.word span{font-size:14px;color:#D5EADB}
+@media(max-width:900px){.gloss{grid-template-columns:1fr;padding:var(--space-4) 20px}.words{grid-template-columns:1fr 1fr}}
+
+/* ===== MENU ===== */
+.menu-box{background:var(--color-paper);border:1px solid var(--color-border);border-radius:var(--r-lg);padding:var(--space-4)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-3)}
+.tab{min-height:46px;padding:0 18px;border-radius:999px;border:1.5px solid var(--color-border);font-weight:800;font-size:15px;transition:background-color .2s,color .2s,border-color .2s}
+.tab:hover{border-color:var(--color-primary)}
+.tab[aria-selected="true"]{background:var(--color-primary);border-color:var(--color-primary);color:#fff}
+.menu-list{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--space-5)}
+.dish{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed var(--color-border)}
+.dish-name{font-weight:800;font-size:17px}
+.dish-desc{display:block;font-size:14px;color:var(--color-muted);font-weight:600}
+.dots{flex:1;border-bottom:2px dotted var(--color-border);transform:translateY(-6px);min-width:14px}
+.dish-price{font-family:var(--font-head);font-weight:700;font-size:20px;color:var(--color-primary);white-space:nowrap}
+.menu-foot{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:var(--space-3);color:var(--color-muted);font-size:15px}
+.menu-foot span{display:inline-flex;gap:8px;align-items:center}
+.menu-foot .icon{color:var(--color-jade)}
+@media(max-width:900px){
+  .menu-box{padding:var(--space-3) 16px;border-radius:var(--r-md)}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin:0 -16px var(--space-2);padding:0 16px 4px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none}
+  .menu-list{grid-template-columns:1fr}
+}
+
+/* ===== COZY ===== */
+.cozy{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);align-items:center}
+.cozy-pic{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:5/4;background:linear-gradient(150deg,#E8B07A,#9C3D22);box-shadow:var(--shadow)}
+.cozy-pic img{width:100%;height:100%;object-fit:cover}
+.cozy h2{font-size:clamp(32px,4.6vw,52px);margin:10px 0 16px}
+.cozy > div > p{color:var(--color-muted);max-width:480px}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:var(--space-4)}
+.perk{display:flex;gap:12px;padding:16px;border-radius:var(--r-sm);background:var(--color-paper);border:1px solid var(--color-border)}
+.perk .ic{width:40px;height:40px;border-radius:10px;background:var(--color-jade-soft);color:var(--color-jade);display:grid;place-items:center;flex:none}
+.perk b{display:block;font-size:16px}
+.perk span{font-size:14px;color:var(--color-muted)}
+@media(max-width:900px){.cozy{grid-template-columns:1fr}}
+@media(max-width:480px){.perks{grid-template-columns:1fr}}
+
+/* ===== REVIEWS ===== */
+.band{background:var(--color-band)}
+.reviews{display:grid;grid-template-columns:300px 1fr;gap:18px}
+.score{background:var(--color-primary);color:#fff;border-radius:var(--r-lg);padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px;position:relative;overflow:hidden}
+.score .num{font-family:var(--font-head);font-size:100px;line-height:.9}
+.score .stars{color:#FCD34D}.score .stars .icon{width:22px;height:22px}
+.score p{opacity:.92;font-weight:600}
+.score a{display:inline-flex;align-items:center;gap:8px;font-weight:800;min-height:44px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--color-paper);border:1px solid var(--color-border);border-radius:var(--r-md);padding:24px;display:flex;flex-direction:column;gap:10px}
+.rev .hand{font-size:28px}
+.rev p{flex:1}
+@media(max-width:1000px){.reviews{grid-template-columns:1fr}}
+@media(max-width:760px){.rev-grid{grid-template-columns:1fr}}
+
+/* ===== VISIT ===== */
+.visit{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}
+.visit-card{background:var(--color-paper);border:1px solid var(--color-border);border-radius:var(--r-lg);padding:var(--space-4);display:flex;flex-direction:column;gap:20px}
+.vrow{display:flex;gap:14px}
+.vrow .ic{width:44px;height:44px;border-radius:12px;background:#FBE4DF;color:var(--color-primary);display:grid;place-items:center;flex:none}
+.vrow small{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--color-muted)}
+.vrow b{font-size:17px}
+.vrow .sub{display:block;font-size:14px;color:var(--color-muted)}
+.visit-card .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.visit-card .actions .btn{flex:1 1 180px}
+.map{border-radius:var(--r-lg);overflow:hidden;min-height:480px;background:var(--color-band);border:1px solid var(--color-border)}
+.map iframe{width:100%;height:100%;min-height:480px;border:0;display:block}
+@media(max-width:900px){.visit{grid-template-columns:1fr}.visit-card{padding:var(--space-3)}.map,.map iframe{min-height:320px}}
+
+/* ===== FOOTER ===== */
+.footer{background:#2A140D;color:#D9C3B3;padding:var(--space-5) 0;margin-top:var(--space-6);font-size:14px}
+.footer .container{display:flex;justify-content:space-between;align-items:center;gap:var(--space-3);flex-wrap:wrap}
+.footer b{font-family:var(--font-head);font-size:22px;color:#fff}
+
+/* ===== MOBILE BAR ===== */
+.mbar{display:none}
+@media(max-width:900px){
+  .mbar{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(251,244,232,.95);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--color-border);padding:8px 12px calc(8px + env(safe-area-inset-bottom))}
+  .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;border-radius:14px;font-size:13px;font-weight:800}
+  .mbar a.main{background:var(--color-primary);color:#fff}
+  body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+}
+
+/* ===== ДЕМО ===== */
+#demo-tag{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#2A140D;color:#FBF4E8;
+  font:700 12px/1.2 var(--font-body);box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+#demo-tag i{width:8px;height:8px;border-radius:50%;background:#F87171}
+#demo-tag a{text-decoration:underline;text-underline-offset:2px}
+@media(max-width:900px){#demo-tag{bottom:calc(84px + env(safe-area-inset-bottom));left:12px}}
+#demo-lock{position:fixed;inset:0;z-index:10000;background:var(--color-bg);display:none;align-items:center;justify-content:center;text-align:center;padding:24px}
+#demo-lock h2{font-size:34px;margin-bottom:12px}
+
+/* ===== MOTION ===== */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.lantern{animation:none}*{transition-duration:0s!important}}
+</style>
+</head>
+<body oncontextmenu="return false" oncopy="return false" ondragstart="return false">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="lantern" viewBox="0 0 60 120">
+    <line x1="30" y1="0" x2="30" y2="22" stroke="#7A5A3A" stroke-width="1.5"/>
+    <rect x="22" y="20" width="16" height="6" rx="2" fill="#CA8A04"/>
+    <path d="M30 26c-17 0-24 12-24 28s7 28 24 28 24-12 24-28-7-28-24-28z" fill="#DC2626"/>
+    <path d="M30 26c-8 0-11 12-11 28s3 28 11 28 11-12 11-28-3-28-11-28z" fill="#EF4444" opacity=".55"/>
+    <path d="M8 46h44M7 62h46" stroke="#CA8A04" stroke-width="2" opacity=".8"/>
+    <rect x="22" y="80" width="16" height="6" rx="2" fill="#CA8A04"/>
+    <path d="M27 86v24M30 86v28M33 86v24" stroke="#CA8A04" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-metro" viewBox="0 0 24 24"><path d="M4 19 8 5l4 8 4-8 4 14"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3.3.4 1.2 1.4 2.3 2.5 2.8z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M10 5.2C10 3.4 8.6 2.1 6.9 2.3 4.5 2.6 3 6 3 8.4c0 .9.2 1.7.6 2.4"/><path d="M14 5.2c0-1.8 1.4-3.1 3.1-2.9 2.4.3 3.9 3.7 3.9 6.1 0 .9-.2 1.7-.6 2.4"/><path d="M8 14v.5M16 14v.5M11.3 17h1.4l-.7.7z"/><path d="M4.4 11.3C3.6 12.6 3 14.4 3 16.4 3 20 7 22 12 22s9-2 9-5.6c0-2-.6-3.8-1.4-5.1"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-quiet" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M7 21h10M8 7c0-2 2-2 2-4M12 7c0-2 2-2 2-4M16 7c0-2 2-2 2-4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+
+  <!-- иллюстрации блюд -->
+  <symbol id="d-pho" viewBox="0 0 96 96"><ellipse cx="48" cy="52" rx="38" ry="10" fill="#FFF7EA"/><path d="M10 52h76c0 20-17 32-38 32S10 72 10 52z" fill="#B91C1C"/><path d="M14 52c4 14 18 24 34 24s30-10 34-24" fill="none" stroke="#CA8A04" stroke-width="2"/><ellipse cx="48" cy="52" rx="34" ry="8" fill="#E9A65A"/><path d="M26 50c6-3 10 3 16 0s10 3 16 0 10 3 14 0" stroke="#FFF3D6" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="36" cy="52" r="3" fill="#2F6B4F"/><circle cx="58" cy="50" r="3" fill="#2F6B4F"/><path d="M60 10 44 44M70 12 52 44" stroke="#7A5A3A" stroke-width="3" stroke-linecap="round"/><path d="M38 30c0-5 4-5 4-10M48 26c0-5 4-5 4-10" stroke="#C9A98F" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="d-tomyam" viewBox="0 0 96 96"><path d="M12 48h72c0 20-16 34-36 34S12 68 12 48z" fill="#2A140D"/><ellipse cx="48" cy="48" rx="36" ry="9" fill="#E85D2A"/><path d="M30 46c3-4 7-4 9 0M54 48c3-4 7-4 9 0" stroke="#FFD7C2" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="46" cy="47" r="3" fill="#2F6B4F"/><circle cx="66" cy="44" r="2.5" fill="#FCD34D"/><path d="M40 30c0-5 4-5 4-10M52 28c0-5 4-5 4-10" stroke="#C9A98F" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="d-bao" viewBox="0 0 96 96"><ellipse cx="48" cy="76" rx="34" ry="6" fill="#E3CDB0"/><path d="M18 70c0-24 14-40 30-40s30 16 30 40z" fill="#FFF8EE" stroke="#E3CDB0" stroke-width="2"/><path d="M48 32c-4 6-10 8-10 8M48 32c4 6 10 8 10 8M48 32v10" stroke="#E3CDB0" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M40 20c0-5 4-5 4-10M52 20c0-5 4-5 4-10" stroke="#C9A98F" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="d-bubble" viewBox="0 0 96 96"><path d="M28 30h40l-5 54H33z" fill="#F4E7D2" stroke="#C9A98F" stroke-width="2"/><path d="M30 52h36l-3 32H33z" fill="#C98B5A"/><circle cx="40" cy="76" r="3.5" fill="#2A140D"/><circle cx="50" cy="79" r="3.5" fill="#2A140D"/><circle cx="58" cy="74" r="3.5" fill="#2A140D"/><circle cx="45" cy="70" r="3.5" fill="#2A140D"/><rect x="24" y="24" width="48" height="8" rx="3" fill="#2F6B4F"/><path d="M54 8 50 72" stroke="#B91C1C" stroke-width="5" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="#top" class="logo" aria-label="Хой Ан 88 — наверх"><svg aria-hidden="true"><use href="#lantern"/></svg><span><b>Хой Ан 88</b><small>вьетнамская кухня</small></span></a>
+    <nav class="nav" aria-label="Разделы"><a href="#hits">С чего начать</a><a href="#menu">Меню</a><a href="#reviews">Отзывы</a><a href="#visit">Контакты</a></nav>
+    <a href="tel:+79872375245" class="btn btn-primary header-cta"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="lanterns" aria-hidden="true">
+      <span class="lantern" style="left:6%;animation-delay:-1s"><svg width="44" height="96"><use href="#lantern"/></svg></span>
+      <span class="lantern" style="left:18%;animation-delay:-2.5s"><svg width="34" height="70"><use href="#lantern"/></svg></span>
+      <span class="lantern" style="left:48%;animation-delay:-.5s"><svg width="38" height="80"><use href="#lantern"/></svg></span>
+      <span class="lantern" style="left:78%;animation-delay:-3s"><svg width="48" height="104"><use href="#lantern"/></svg></span>
+      <span class="lantern" style="left:92%;animation-delay:-1.8s"><svg width="34" height="72"><use href="#lantern"/></svg></span>
+    </div>
+    <div class="container hero-grid">
+      <div class="reveal">
+        <a href="#reviews" class="rating"><b>5,0</b><span class="stars" aria-hidden="true"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></span>183 оценки на Яндекс Картах</a>
+        <h1>Вьетнамский <em>фо</em> и уютный вечер у метро</h1>
+        <p class="hero-lead">Маленькое тёплое кафе, где готовят вьетнамцы: наваристый фо бо, том ям, бань бао и баббл-чай. Порции такие, что одной тарелки хватает на весь обед.</p>
+        <div class="actions">
+          <a href="#menu" class="btn btn-primary"><svg class="icon"><use href="#i-menu"/></svg>Смотреть меню</a>
+          <a href="tel:+79872375245" class="btn btn-outline"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="arch"><img src="https://avatars.mds.yandex.net/get-altay/14336229/2a00000197a50ebff878761d41120f2288ed/XXL_height" alt="Блюда кафе «Хой Ан 88»" width="700" height="875" fetchpriority="high" onerror="this.remove()"></div>
+        <div class="stamp"><b>5,0</b><span>рейтинг</span></div>
+        <div class="note"><span class="hand">Фо бо — 430 ₽</span><small>800 мл, наш хит</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container reveal" aria-label="Коротко">
+    <div class="info">
+      <div class="info-item"><svg class="icon"><use href="#i-clock"/></svg><div><small>Сегодня</small><b>до 21:30</b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-pin"/></svg><div><small>Адрес</small><b>Р. Зорге, 66к5</b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-phone"/></svg><div><small>Телефон</small><b><a href="tel:+79872375245">+7 987 237-52-45</a></b></div></div>
+      <div class="info-item"><svg class="icon"><use href="#i-metro"/></svg><div><small>Метро</small><b>Пр. Победы · 2 мин</b></div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="hits">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Впервые у нас?</span><h2>С чего начать</h2></div>
+        <p>Четыре позиции, которые гости советуют попробовать в первую очередь.</p>
+      </div>
+      <div class="sig-grid">
+        <article class="sig reveal"><div class="sig-top"><svg aria-hidden="true"><use href="#d-pho"/></svg></div><div class="sig-body"><span class="vn">Phở bò</span><h3>Фо Бо</h3><p>Суп с рисовой лапшой, говядиной и свежей зеленью. Главное блюдо Вьетнама.</p><div class="row"><span>800 мл</span><b>430 ₽</b></div></div></article>
+        <article class="sig reveal"><div class="sig-top"><svg aria-hidden="true"><use href="#d-tomyam"/></svg></div><div class="sig-body"><span class="vn">Tom yum</span><h3>Том Ям</h3><p>Острый и кислый суп. Согревает лучше любого чая.</p><div class="row"><span>700 мл</span><b>510 ₽</b></div></div></article>
+        <article class="sig reveal"><div class="sig-top"><svg aria-hidden="true"><use href="#d-bao"/></svg></div><div class="sig-body"><span class="vn">Bánh bao</span><h3>Бань Бао</h3><p>Мягкая паровая булочка с начинкой. Можно взять жареную.</p><div class="row"><span>1 шт</span><b>от 150 ₽</b></div></div></article>
+        <article class="sig reveal"><div class="sig-top"><svg aria-hidden="true"><use href="#d-bubble"/></svg></div><div class="sig-body"><span class="vn">Bubble tea</span><h3>Баббл-чай</h3><p>Чай с шариками тапиоки. Ещё есть шейки из манго, авокадо и драконьего фрукта.</p><div class="row"><span>400 мл</span><b>280 ₽</b></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="container reveal" aria-label="Как читать меню">
+    <div class="gloss">
+      <div>
+        <span class="kicker">Шпаргалка</span>
+        <h2>Как читать вьетнамское меню</h2>
+        <p>Названия блюд складываются из слов, как конструктор. Запомните несколько, и выбирать станет легко: «Ком Га» — рис с курицей, «Бун Бо» — лапша с говядиной.</p>
+      </div>
+      <div class="words">
+        <div class="word"><b>Фо</b><span>рисовая лапша</span></div>
+        <div class="word"><b>Бун</b><span>тонкая рисовая вермишель</span></div>
+        <div class="word"><b>Ми</b><span>пшеничная лапша</span></div>
+        <div class="word"><b>Ком</b><span>рис</span></div>
+        <div class="word"><b>Бо</b><span>говядина</span></div>
+        <div class="word"><b>Га</b><span>курица</span></div>
+        <div class="word"><b>Вит</b><span>утка</span></div>
+        <div class="word"><b>Хай Сан</b><span>морепродукты</span></div>
+        <div class="word"><b>Чаи</b><span>вегетарианское</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="menu">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Меню</span><h2>Всё меню</h2></div>
+        <p>Супы, рис, вок, закуски, салаты и десерты. Больше 60 позиций.</p>
+      </div>
+      <div class="menu-box reveal">
+        <div class="tabs" role="tablist" aria-label="Категории меню" id="tabs"></div>
+        <div class="menu-list" role="tabpanel" id="menu-list" aria-live="polite"></div>
+        <div class="menu-foot">
+          <span><svg class="icon"><use href="#i-flame"/></svg>На каждом столе соусы: от сладкого до очень острого</span>
+          <span><svg class="icon"><use href="#i-bag"/></svg>Любое блюдо с собой</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="container cozy">
+      <div class="cozy-pic reveal"><img src="https://avatars.mds.yandex.net/get-altay/13594632/2a000001933f73c3d307dde037a7338ff3a6/XXL_height" alt="Зал кафе «Хой Ан 88»" width="800" height="640" loading="lazy" onerror="this.remove()"></div>
+      <div class="reveal">
+        <span class="kicker">Атмосфера</span>
+        <h2>Как дома, только во Вьетнаме</h2>
+        <p>Небольшой, чистый и тихий зал без громкой музыки. Здесь удобно пообедать в перерыве или неспешно поужинать после работы.</p>
+        <div class="perks">
+          <div class="perk"><span class="ic"><svg class="icon"><use href="#i-bowl"/></svg></span><div><b>Большие порции</b><span>Одной тарелки хватает</span></div></div>
+          <div class="perk"><span class="ic"><svg class="icon"><use href="#i-quiet"/></svg></span><div><b>Тихо и уютно</b><span>Без громкой музыки</span></div></div>
+          <div class="perk"><span class="ic"><svg class="icon"><use href="#i-dog"/></svg></span><div><b>Можно с собакой</b><span>Берите питомца с собой</span></div></div>
+          <div class="perk"><span class="ic"><svg class="icon"><use href="#i-card"/></svg></span><div><b>Удобная оплата</b><span>Карта, наличные, QR (СБП)</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="reviews">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Отзывы</span><h2>Гости ставят пятёрки</h2></div>
+        <p>Коротко о том, за что «Хой Ан 88» любят на Яндекс Картах.</p>
+      </div>
+      <div class="reviews">
+        <div class="score reveal">
+          <div><div class="num">5,0</div><div class="stars" aria-label="Оценка 5 из 5"><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg></div></div>
+          <p>183 оценки и 143 отзыва на Яндекс Картах</p>
+          <a href="https://yandex.ru/maps/org/khoy_an_88/173996874787/reviews/" target="_blank" rel="noopener">Читать отзывы <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="rev-grid">
+          <figure class="rev reveal"><span class="hand">Вкусно, как во Вьетнаме</span><p>Гости, побывавшие во Вьетнаме, пишут, что фо и том ям здесь не хуже, а порой и лучше.</p></figure>
+          <figure class="rev reveal"><span class="hand">Огромные порции</span><p>Одного супа или тарелки лапши хватает, чтобы наесться до вечера. И цены приятные.</p></figure>
+          <figure class="rev reveal"><span class="hand">Душевные хозяева</span><p>Готовят и встречают сами вьетнамцы: вежливо, быстро и с заботой.</p></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit">
+    <div class="container">
+      <div class="sec-head reveal">
+        <div><span class="kicker">Контакты</span><h2>Как нас найти</h2></div>
+        <p>Приволжский район, пара минут пешком от метро «Проспект Победы».</p>
+      </div>
+      <div class="visit">
+        <div class="visit-card reveal">
+          <div class="vrow"><span class="ic"><svg class="icon"><use href="#i-pin"/></svg></span><div><small>Адрес</small><b>Казань, ул. Рихарда Зорге, 66к5</b></div></div>
+          <div class="vrow"><span class="ic"><svg class="icon"><use href="#i-clock"/></svg></span><div><small>Режим работы</small><b>Ежедневно до 21:30</b></div></div>
+          <div class="vrow"><span class="ic"><svg class="icon"><use href="#i-phone"/></svg></span><div><small>Телефон</small><b><a href="tel:+79872375245">+7 (987) 237-52-45</a></b></div></div>
+          <div class="vrow"><span class="ic"><svg class="icon"><use href="#i-metro"/></svg></span><div><small>Как добраться</small><b>Метро «Проспект Победы» — 140 м</b><span class="sub">Ост. «Проспект Победы» — 120 м</span></div></div>
+          <div class="vrow"><span class="ic"><svg class="icon"><use href="#i-bag"/></svg></span><div><small>Доставка</small><b>Яндекс Еда и Delivery Club</b><span class="sub">Или с собой по звонку</span></div></div>
+          <div class="actions">
+            <a href="https://yandex.ru/maps/?rtext=~55.748564,49.208220" target="_blank" rel="noopener" class="btn btn-primary"><svg class="icon"><use href="#i-route"/></svg>Маршрут</a>
+            <a href="tel:+79872375245" class="btn btn-outline"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
+          </div>
+        </div>
+        <div class="map reveal"><iframe src="https://yandex.ru/map-widget/v1/?ll=49.208220%2C55.748564&z=16&oid=173996874787" loading="lazy" title="«Хой Ан 88» на карте"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div><b>Хой Ан 88</b><br>Вьетнамская кухня · Казань, ул. Рихарда Зорге, 66к5</div>
+    <div>Сайт: Артём · <a href="https://t.me/q0crx" target="_blank" rel="noopener" style="text-decoration:underline">@q0crx</a></div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Быстрые действия">
+  <a href="#menu"><svg class="icon"><use href="#i-menu"/></svg>Меню</a>
+  <a href="tel:+79872375245" class="main"><svg class="icon"><use href="#i-phone"/></svg>Позвонить</a>
+  <a href="https://yandex.ru/maps/?rtext=~55.748564,49.208220" target="_blank" rel="noopener"><svg class="icon"><use href="#i-route"/></svg>Маршрут</a>
+</nav>
+
+<div id="demo-tag"><i></i>Демо-версия · <a href="https://t.me/q0crx" target="_blank" rel="noopener">Артём</a></div>
+<div id="demo-lock"><div><h2>Демо-версия закрыта</h2>Чтобы получить сайт, напишите разработчику: <a href="https://t.me/q0crx" style="text-decoration:underline">@q0crx</a></div></div>
+
+<script>
+/* ===== НАСТРОЙКИ ДЕМО ===== */
+const DEMO_UNTIL   = "2026-11-08";
+const ALLOWED_HOST = "";   // напр. "q0crx.github.io"
+
+/* ===== МЕНЮ: [название, порция, цена, пояснение] ===== */
+const MENU={
+ "Супы":[["Суп Фо Бо","800 мл","430","рисовая лапша, говядина"],["Фо Га","800 мл","430","рисовая лапша, курица"],["Суп Бун/Фо Бо Шот Ванг","800 мл","430","тушёная говядина"],
+   ["Суп Бун/Фо Хай Сан","800 мл","460","с морепродуктами"],["Суп Бун/Фо Манг Вит","800 мл","490","утка и побеги бамбука"],["Том Ям","700 мл","510","острый и кислый"],["Бун Том","800 мл","510","вермишель с креветками"]],
+ "Рис":[["Ком Га","400 г","410","рис с курицей"],["Ком Га Сао","400 г","410","рис с жареной курицей"],["Ком Га Сот Кам","400 г","430","курица в апельсиновом соусе"],["Ком Га Чуа Нгот","400 г","430","курица в кисло-сладком соусе"],
+   ["Ком Бо Сао","400 г","430","рис с жареной говядиной"],["Ком Бо Лук Лак","400 г","450","говядина кубиками"],["Ком Бо Шот Ванг","400 г","450","тушёная говядина"],["Ком Хай Сан Сао","400 г","490","с морепродуктами"]],
+ "Жареный рис":[["Ком Ранг Чаи","400 г","350","вегетарианский"],["Ком Ранг Га","400 г","420","с курицей"],["Ком Ранг Бо","400 г","440","с говядиной"],["Ком Ранг Вит","400 г","480","с уткой"],
+   ["Ком Ранг Хай Сан","400 г","490","с морепродуктами"],["Ком Ранг Том","400 г","490","с креветками"]],
+ "Вок":[["Ми Сао Чаи","400 г","300","лапша с овощами"],["Га Сао Ми","400 г","410","лапша с курицей"],["Бо Сао Миен","400 г","430","стеклянная лапша с говядиной"],["Вит Сао Фо","400 г","450","рисовая лапша с уткой"],
+   ["Хай Сан Сао Ми","400 г","490","лапша с морепродуктами"],["Бун Чон Бо","400 г","399","вермишель с говядиной"],["Бун Чон Вит","400 г","449","вермишель с уткой"]],
+ "Закуски":[["Нем Хай Сан","1 шт","120","ролл с морепродуктами"],["Бань Бао","1 шт","150","паровая булочка"],["Бань Бао жареный","1 шт","160","жареная булочка"],["Картошка фри","200 г","150",""],
+   ["Нем Ран","3 шт","280","жареные спринг-роллы"],["Мык Чиен Су","6 шт","320","кальмары в кляре"],["Гой Куон","3 шт","350","свежие роллы в рисовой бумаге"],["Том Чиен Су","5 шт","360","креветки в кляре"],["Бо Лук Лак Фри","400 г","450","говядина с картофелем фри"]],
+ "Салаты":[["Ном Каи Тим","200 г","130",""],["Ном Га","200 г","230","с курицей"],["Ном Бо","200 г","230","с говядиной"],["Ном Том","200 г","250","с креветками"],["Салат Рау","200 г","270","из свежей зелени"]],
+ "Напитки":[["Баббл-чай","400 мл","280",""],["Вьетнамский кофе","400 мл","150",""],["Вьетнамский зелёный чай","","150",""],["Цветочный чай","","250",""],["Чёрный чай","","40",""],
+   ["Холодный лимонный чай","400 мл","120",""],["Лимонный сок","400 мл","120",""],["Мохито","400 мл","150","безалкогольный"],["Апельсиновый фреш","400 мл","250",""],["Арбузный фреш","400 мл","250",""],
+   ["Манго шейк","400 мл","300",""],["Авокадо шейк","400 мл","300",""],["Драконий шейк","400 мл","300","питахайя"],["Ананасовый шейк","400 мл","300",""],["Папайя шейк","400 мл","300",""],
+   ["Клубника-банан","400 мл","300",""],["Маракуйя","400 мл","300",""],["Глинтвейн","350 мл","350",""],["Кофе 3в1","","50",""]],
+ "Десерты":[["Жареные бананы","3 шт","199",""]]
+};
+const tabs=document.getElementById("tabs"),list=document.getElementById("menu-list");
+function show(cat,focus){
+  [...tabs.children].forEach(b=>{const on=b.dataset.cat===cat;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()});
+  list.innerHTML=MENU[cat].map(([n,w,p,d])=>{const sub=[d,w].filter(Boolean).join(" · ");
+    return `<div class="dish"><div><span class="dish-name">${n}</span>${sub?`<span class="dish-desc">${sub}</span>`:""}</div><span class="dots"></span><span class="dish-price">${p} ₽</span></div>`}).join("");
+}
+Object.keys(MENU).forEach(c=>{const b=document.createElement("button");b.className="tab";b.setAttribute("role","tab");b.dataset.cat=c;b.textContent=c;b.onclick=()=>show(c);tabs.appendChild(b)});
+tabs.addEventListener("keydown",e=>{const k=Object.keys(MENU),i=k.indexOf(document.activeElement.dataset.cat);
+  if(e.key==="ArrowRight"||e.key==="ArrowDown"){e.preventDefault();show(k[(i+1)%k.length],true)}
+  if(e.key==="ArrowLeft"||e.key==="ArrowUp"){e.preventDefault();show(k[(i-1+k.length)%k.length],true)}});
+show("Супы");
+
+/* хедер + появление */
+const header=document.getElementById("header");
+addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>10),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>{const g=el.parentElement;if(g.matches(".sig-grid,.rev-grid"))el.style.transitionDelay=([...g.children].indexOf(el)*70)+"ms";io.observe(el)});
+
+/* ===== ЗАЩИТА ДЕМО ===== */
+(function(){
+  const lock=()=>{document.getElementById("demo-lock").style.display="flex";document.body.style.overflow="hidden"};
+  if(new Date()>new Date(DEMO_UNTIL+"T23:59:59"))lock();
+  if(ALLOWED_HOST&&location.hostname&&location.hostname!==ALLOWED_HOST)lock();
+  const tag=document.getElementById("demo-tag").outerHTML;
+  new MutationObserver(()=>{const t=document.getElementById("demo-tag");
+    if(!t||getComputedStyle(t).display==="none"||getComputedStyle(t).visibility==="hidden"||+getComputedStyle(t).opacity<.5){t&&t.remove();document.body.insertAdjacentHTML("beforeend",tag)}
+  }).observe(document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:["style","class"]});
+  document.addEventListener("keydown",e=>{const k=e.key.toLowerCase(),m=e.ctrlKey||e.metaKey;
+    if(e.key==="F12"||(m&&["s","u","p"].includes(k))||(m&&e.shiftKey&&["i","j","c"].includes(k)))e.preventDefault()});
+})();
+</script>
+</body>
+</html>
